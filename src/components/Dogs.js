@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import Dog from "./Dog";
+// create a starting value
 
-function Dogs(){
-    const [dogs, setDogs] = useState([{
-        name: "Duke",
-        age:2,
-        breed:"Havenese",
-        favoriteToy: "ball",
-        size:"medium",
-        gender:"male"
-    }]);
+import Dog from "./Dog";
+import DogData from "./DogData";
+
+function Dogs(props){
+    console.log(props)
+    const [dogs, setDogs] = useState(DogData);
+
     const [dogform, setDogform] = useState({
         name: "",
         age: 1,
@@ -41,16 +39,16 @@ function Dogs(){
                 return (
                     <div key={idx}>
                         <Dog dog={dog} />
-                        
                     </div>
                 )
             })}
 
             <form onSubmit={handleSubmit}>
                 <label>
-                    <span>Name:</span>
+                    <span>Name:*</span>
                     <input 
                         type="text"
+                        required
                         placeholder="Dog's Name"
                         name="name"
                         onChange={handleChange}
