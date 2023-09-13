@@ -59,54 +59,62 @@ function Dogs(props){
                         />
                     </Form.Label>
                 </Form.Group>
-                <label>
-                    <span>Age:</span>
-                    <input 
-                        type="number"
-                        placeholder="Dog's Age"
-                        name="age"
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>
-                    <span>Breed:</span>
-                    <input 
-                        type="text"
-                        placeholder="Dog's Breed"
-                        name="breed"
-                        onChange={handleChange}
-                    />
-                </label>
-                <label onChange={handleChange}>
-                    <span>Size:</span>
-                    <select name="size">
-                        <option value="Tiny">Tiny</option>
-                        <option value="Small">Small</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Large">Large</option>
-                        <option value="ExtraLarge">ExtraLarge</option>
-                    </select>
-                </label>
-                <label>
-                    <span>Favorite Toy:</span>
-                    <input 
-                        type="text"
-                        placeholder="Dog's favorite Toy"
-                        name="favoriteToy"
-                        onChange={handleChange}
-                    />
-                </label>
-                <label onChange={handleChange}>
-                    <select>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                    </select>
-                </label>
+                <Form.Group className="mb-3">
+                    <Form.Label>
+                        <span>Age:</span>
+                        <input 
+                            type="number"
+                            placeholder="Dog's Age"
+                            name="age"
+                            onChange={handleChange}
+                        />
+                    </Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>
+                        <span>Breed:</span>
+                        <input 
+                            type="text"
+                            placeholder="Dog's Breed"
+                            name="breed"
+                            onChange={handleChange}
+                        />
+                    </Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label onChange={handleChange}>
+                        <span>Size:</span>
+                        <select name="size">
+                            <option value="Tiny">Tiny</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="ExtraLarge">ExtraLarge</option>
+                        </select>
+                    </Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>
+                        <span>Favorite Toy:</span>
+                        <input 
+                            type="text"
+                            placeholder="Dog's favorite Toy"
+                            name="favoriteToy"
+                            onChange={handleChange}
+                        />
+                    </Form.Label>
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label onChange={handleChange}>
+                        <select>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </Form.Label>
+                </Form.Group>
                 <Button variant="primary">Submit</Button>
             </Form>
-        
         </>
-
     )
 }
 
