@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 // create a starting value
 
 import Dog from "./Dog";
@@ -45,17 +46,19 @@ function Dogs(props){
                 )
             })}
 
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <span>Name:*</span>
-                    <input 
-                        type="text"
-                        required
-                        placeholder="Dog's Name"
-                        name="name"
-                        onChange={handleChange}
-                    />
-                </label>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3">
+                    <Form.Label>
+                        <span>Name:*</span>
+                        <input 
+                            type="text"
+                            required
+                            placeholder="Dog's Name"
+                            name="name"
+                            onChange={handleChange}
+                        />
+                    </Form.Label>
+                </Form.Group>
                 <label>
                     <span>Age:</span>
                     <input 
@@ -100,7 +103,7 @@ function Dogs(props){
                     </select>
                 </label>
                 <Button variant="primary">Submit</Button>
-            </form>
+            </Form>
         
         </>
 
