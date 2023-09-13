@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import {Button} from "react-bootstrap";
 // create a starting value
 
 import Dog from "./Dog";
 import DogData from "./DogData";
+
 
 function Dogs(props){
     console.log(props)
@@ -97,7 +99,7 @@ function Dogs(props){
                         <option value="Male">Male</option>
                     </select>
                 </label>
-                <button>Submit Button</button>
+                <Button variant="primary">Submit</Button>
             </form>
         
         </>

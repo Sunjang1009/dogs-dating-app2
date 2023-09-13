@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import Dogs from './components/Dogs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [likes, setLikes] = useState(0)
