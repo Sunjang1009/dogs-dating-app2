@@ -37,10 +37,10 @@ function Dogs(props){
 
     return (
         <>
-            <h1>Dogs</h1>
+            <h1>My Dogs</h1>
             {dogs.map((dog, idx) => {
                 return (
-                    <div key={idx}>
+                    <div key={idx} className="dog-container">
                         <Dog dog={dog} />
                     </div>
                 )
